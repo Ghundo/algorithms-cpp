@@ -6,50 +6,35 @@
  * because the memory will depend on biggest number in the input.
  */
 
-#include <fstream>
 #include <iostream>
 
-// Algorithm
-void get_appearances(std::fstream &data_in, int arr[], int arrsize) {
-    for (int i = 0; i < arrsize; i++) {
-        int x;
-        data_in >> x;
-        arr[x]++;
+void get_appearances(int input_arr[], int output_arr[], int datasize) {
+    for (int i = 0; i < datasize; i++) {
+        output_arr[input_arr[i]]++;
     }
-}
-
-int get_datalength(std::fstream &data_in) {
-    int numbers = 0;
-
-    while(!data_in.eof()) {
-        int x;
-        if (data_in >> x) {
-            numbers++;
-        }
-    }
-    data_in.clear();
-    data_in.seekg(0, std::ios::beg);
-    return numbers;
 }
 
 int main() {
-    std::fstream data_in("data.in");
-    int n = get_datalength(data_in);
-    int arr[n] = {};
+    int data[] = {0, 4, 4, 1, 6, 3, 7, 7, 7, 9};
+    int n = sizeof(data) / sizeof(data[0]);
+    int appearance_arr[n] = {};
 
-    get_appearances(data_in, arr, n);
-
-    data_in.close();
+    get_appearances(data, appearance_arr, n);
 
     // Show output.
-    std::cout << "Numbers:\t";
+    std::cout << " Input Data: ";
+    for (int i = 0; i < n; i++) {
+        std::cout << data[i] << " ";
+    }
+    std::cout << "\nNumber Line: ";
     for (int i = 0; i < n; i++) {
         std::cout << i << " ";
     }
-    std::cout << "\nAppearances:\t";
+    std::cout << "\nAppearances: ";
     for (int i = 0; i < n; i++) {
-        std::cout << arr[i] << " ";
+        std::cout << appearance_arr[i] << " ";
     }
+    std::cout << std::endl;
 
     return 0;
 }
