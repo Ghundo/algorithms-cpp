@@ -10,7 +10,7 @@
 #include <iostream>
 
 // Algorithm
-void get_all_appearances(std::fstream &data_in, int arr[], int arrsize) {
+void get_appearances(std::fstream &data_in, int arr[], int arrsize) {
     for (int i = 0; i < arrsize; i++) {
         int x;
         data_in >> x;
@@ -37,7 +37,7 @@ int main() {
     int n = get_datalength(data_in);
     int arr[n] = {};
 
-    get_all_appearances(data_in, arr, n);
+    get_appearances(data_in, arr, n);
 
     data_in.close();
 
