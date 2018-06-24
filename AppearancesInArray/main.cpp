@@ -3,7 +3,7 @@
  * Time complexity: O(n)
  *
  * This algorithm is only recommended in cases where the input size is small
- * because we will need a memory as big as the biggest number in the input.
+ * because it will need a memory as big as the biggest number in the input.
  */
 
 #include <fstream>
