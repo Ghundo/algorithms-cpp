@@ -1,5 +1,0 @@
-# depslib dependency file v1.0
-1529851455 source:e:\applications\computing\codeblocks\c++ projects\algorithms\countingsort\main.cpp
-	<fstream>
-	<iostream>
-
