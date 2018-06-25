@@ -1,5 +1,5 @@
 /* CountingSort: Sorts a range of integers [0...n] by counting how many times
- * each unique value appears in an array, and using arithmetic to determine
+ * each unique value appears in an array and using arithmetic to determine
  * the position of each value in the output array.
  *
  * Time complexity: O(n+k)
