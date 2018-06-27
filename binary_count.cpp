@@ -1,4 +1,4 @@
-/* Binary count: Counts the number of occurrence of x in the given sorted array
+/* Binary count: Counts the number of occurrence of X in the given sorted array
  * through binary search application.
  *
  * Time complexity: O(log n)
