@@ -1,3 +1,8 @@
+/**
+ *    author: marcavenzaid
+ *    created: 2018-07-04-19.51
+ */
+
 /* Bubble sort: Sorts an array by repeatedly swapping adjacent elements if it is
  * not in the right order.
  *
@@ -6,11 +11,6 @@
  *
  * a = input array.
  * N = number of items.
- */
-
-/**
- *    author: marcavenzaid
- *    created: 2018-07-04-19.51
  */
 
 #include <iostream>

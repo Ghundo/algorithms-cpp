@@ -1,3 +1,8 @@
+/**
+ *    author: marcavenzaid
+ *    created: 2018-06-28-15.45
+ */
+
 /* Binary count: Counts the number of occurrence of X in the given sorted array
  * through binary search application.
  *
@@ -6,11 +11,6 @@
  * A = input array.
  * N = number of items.
  * X = value to search.
- */
-
- /**
- *    author: marcavenzaid
- *    created: 2018-06-28-15.45
  */
 
 #include <iostream>

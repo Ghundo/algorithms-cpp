@@ -1,3 +1,8 @@
+/**
+ *    author: marcavenzaid
+ *    created: 2018-06-28-15.57
+ */
+
 /* Binary search last: Searches for the last occurrence of X in a given sorted
  * array through binary search application.
  *
@@ -7,11 +12,6 @@
  * A = input array.
  * N = number of items.
  * X = value to search.
- */
-
-/**
- *    author: marcavenzaid
- *    created: 2018-06-28-15.57
  */
 
 #include <iostream>

@@ -1,3 +1,8 @@
+/**
+ *    author: marcavenzaid
+ *    created: 2018-06-28-15.07
+ */
+
 /* Binary search: Searches a value in a sorted array by comparing X (the value
  * to search) with the value in the middle of the array. If they are unequal,
  * the half of the array in which X cannot lie is disregarded and the search
@@ -9,11 +14,6 @@
  * A = input array.
  * N = number of items.
  * X = value to search.
- */
-
-/**
- *    author: marcavenzaid
- *    created: 2018-06-28-15.07
  */
 
 #include <iostream>

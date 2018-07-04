@@ -1,3 +1,8 @@
+/**
+ *    author: marcavenzaid
+ *    created: 2018-06-28-16.01
+ */
+
 /* Counting sort: Sorts an array by counting how many times each unique value
  * appeared and using arithmetic to determine the position of each value in the
  * output array.
@@ -13,11 +18,6 @@
  * a = input array.
  * N = number of items.
  * K = maximum value.
- */
-
- /**
- *    author: marcavenzaid
- *    created: 2018-06-28-16.01
  */
 
 #include <iomanip>
