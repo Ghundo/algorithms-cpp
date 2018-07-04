@@ -5,7 +5,7 @@
 
 /* Bubble sort optimized: Sorts an array by repeatedly swapping adjacent
  * elements if it is not in the right order. The algorithm stops when no swap is
- * made.
+ * made in a step or simply when the array is already sorted.
  *
  * Time complexity: O(n^2)
  * Space complexity: O(1)
