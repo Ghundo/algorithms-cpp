@@ -11,6 +11,11 @@
  * X = value to search.
  */
 
+/**
+ *    author: marcavenzaid
+ *    created: 2018-06-28-15.07
+ */
+
 #include <iostream>
 
 int binary_search(const int A[], const int N, const int X) {

@@ -1,6 +1,6 @@
-/* Counting sort: Sorts an array of integers by counting how many times each
- * unique value appeared and using arithmetic to determine the position of each
- * value in the output array.
+/* Counting sort: Sorts an array by counting how many times each unique value
+ * appeared and using arithmetic to determine the position of each value in the
+ * output array.
  *
  * The running time of this algorithm is based on the number of items and the
  * difference between the maximum and minimum values, so it is only recommended
@@ -10,50 +10,55 @@
  * Time complexity: O(n+k)
  * Space complexity: O(k)
  *
- * A = input array.
+ * a = input array.
  * N = number of items.
  * K = maximum value.
+ */
+
+ /**
+ *    author: marcavenzaid
+ *    created: 2018-06-28-16.01
  */
 
 #include <iomanip>
 #include <iostream>
 #include <algorithm>
 
-int* counting_sort(const int A[], const int N, const int K) {
+void counting_sort(int a[], const int N, const int K) {
     int frequencies[K + 1] = {};
 
     for (int i = 0; i < N; i++) {
-        frequencies[A[i]]++;
+        frequencies[a[i]]++;
     }
 
     for (int i = 1; i <= K; i++) {
         frequencies[i] += frequencies[i - 1];
     }
 
-    int* sorted_arr = new int[N]();
+    int sorted_arr[N] = {};
     for (int i = 0; i < N; i++) {
-        sorted_arr[frequencies[A[i]] - 1] = A[i];
-        frequencies[A[i]]--;
+        sorted_arr[frequencies[a[i]] - 1] = a[i];
+        frequencies[a[i]]--;
     }
 
-    return sorted_arr;
+    std::copy(sorted_arr, sorted_arr + N, a);
 }
 
 int main() {
-    int input[] = {0, 4, 4, 1, 6, 3, 7, 7, 7, 9, 15};
-    int N = sizeof(input) / sizeof(input[0]);
-    int K = *std::max_element(input, input + N);
+    int a[] = {0, 4, 4, 1, 6, 3, 7, 7, 7, 9, 15};
+    const int N = sizeof(a) / sizeof(a[0]);
+    const int K = *std::max_element(a, a + N);
 
-    int* sorted_arr = counting_sort(input, N, K);
-
-    // Show output.
     std::cout << " Input Data: ";
     for (int i = 0; i < N; i++) {
-        std::cout << std::setw(2) << input[i] << " ";
+        std::cout << std::setw(2) << a[i] << " ";
     }
+
+    counting_sort(a, N, K);
+
     std::cout << "\n     Sorted: ";
     for (int i = 0; i < N; i++) {
-        std::cout << std::setw(2) << sorted_arr[i] << " ";
+        std::cout << std::setw(2) << a[i] << " ";
     }
     std::cout << std::endl;
 

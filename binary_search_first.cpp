@@ -9,6 +9,11 @@
  * X = value to search.
  */
 
+/**
+ *    author: marcavenzaid
+ *    created: 2018-06-28-15.38
+ */
+
 #include <iostream>
 
 int binary_search_first(const int A[], const int N, const int X) {
