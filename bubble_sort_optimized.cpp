@@ -1,8 +1,3 @@
-/**
- *    author: marcavenzaid
- *    created: 2018-07-04-22.50
- */
-
 /* Bubble sort optimized: Sorts an array by repeatedly swapping adjacent
  * elements if it is not in the right order. The algorithm stops when no swap is
  * made in a step or simply when the array is already sorted.
@@ -12,6 +7,11 @@
  *
  * a = input array.
  * N = number of items.
+ */
+
+/**
+ * author: marcavenzaid
+ * created: 2018-07-04-22.50
  */
 
 #include <iostream>
@@ -35,17 +35,13 @@ void bubble_sort(int a[], const int N) {
 int main() {
     int a[] = {3, 2, 0, 1, 4, 3, 6, 7, 8, 9};
     const int N = sizeof(a) / sizeof(a[0]);
-
     for (int i = 0; i < N; i++) {
         std::cout << a[i] << " ";
     }
-
     bubble_sort(a, N);
-
     std::cout << std::endl;
     for (int i = 0; i < N; i++) {
         std::cout << a[i] << " ";
     }
-
     return 0;
 }

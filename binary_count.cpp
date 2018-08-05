@@ -1,8 +1,3 @@
-/**
- *    author: marcavenzaid
- *    created: 2018-06-28-15.45
- */
-
 /* Binary count: Counts the number of occurrence of X in the given sorted array
  * through binary search application.
  *
@@ -13,12 +8,16 @@
  * X = value to search.
  */
 
+/**
+ * author: marcavenzaid
+ * created: 2018-06-28-15.45
+ */
+
 #include <iostream>
 
 int binary_count(const int A[], const int N, const int X) {
     int l, m, r;
     int first = -1, last = -1;
-
     for (int i = 0 ; i < 2; i++) {
         l = 0;
         r = N - 1;
@@ -46,10 +45,7 @@ int main() {
     // Input should be in ascending order.
     int input[] = {1, 2, 2, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5};
     int N = sizeof(input) / sizeof(input[0]);
-
     int i = binary_count(input, N, 3);
-
     std::cout << i << std::endl;
-
     return 0;
 }
