@@ -1,3 +1,10 @@
+/* Lucas theorem: expresses nCr % p or the modulo of a binomial coefficient
+ * (n, r) by a prime number p.
+ *
+ * Time complexity: O(p^2 * logp(n))
+ * Space complexity: O(p)
+ */
+
 /**
  * author: marcavenzaid
  * created: 2018-07-14-18.18
@@ -13,7 +20,7 @@ int binomial_coefficient(int n, int r, int p) {
     c[0] = 1;
     for (int i = 1; i <= n; ++i) {
         for (int j = min(i, r); j > 0; --j) {
-            c[j] = (c[j] + c[j-1])%p;
+            c[j] = (c[j] + c[j-1]) % p;
         }
     }
     return c[r];
