@@ -1,4 +1,4 @@
-/* Prime factors: outputs all prime factors of n.
+/* Prime factorization: outputs all prime factors of n.
  *
  * Time complexity: O(sqrt(n))
  */
@@ -12,7 +12,7 @@
 
 using namespace std;
 
-vector<int> prime_factors(int n) {
+vector<int> prime_factorization(int n) {
     vector<int> a;
     while (n%2 == 0) {
         a.push_back(2);
