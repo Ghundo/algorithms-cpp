@@ -14,17 +14,13 @@
 using namespace std;
 
 long long sum_first_n_natural_numbers(long long n) {
-    if (n%2 == 0) {
-        return (n/2) * (n+1);
-    } else {
-        return n*(n+1)/2;
-    }
+    return n*(n+1)/2;
 }
 
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(0);
-    long long n = 5;
-    cout << sum_first_n_natural_numbers(10);
+    long long n = 100;
+    cout << sum_first_n_natural_numbers(n);
     return 0;
 }
