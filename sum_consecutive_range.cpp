@@ -1,4 +1,5 @@
-/* Sum consecutive range: Formula to find the sum of integers between l and r.
+/* Sum consecutive range: Formula to find the sum of integers between l and r
+ * (both inclusive).
  *
  * Time complexity: O(1)
  */
@@ -19,7 +20,7 @@ long long sum_consecutive_range(long long l, long long r) {
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(0);
-    long long l = 3, r = 7;
+    long long l = 6, r = 7;
     cout << sum_consecutive_range(l, r);
     return 0;
 }
