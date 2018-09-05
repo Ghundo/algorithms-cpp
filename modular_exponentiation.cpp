@@ -1,4 +1,5 @@
-/* Modular exponentiation: Compute (b^e) % mod. Exponentiation over a modulus.
+/* Modular Exponentiation: Algorithm for computing (b^e) % mod. Exponentiation
+ * over a modulus.
  *
  * Time complexity: O(log y)
  * Space complexity: O(1)
