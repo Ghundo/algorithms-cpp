@@ -1,4 +1,4 @@
-/* Euclidean Algorithm: Algorithm for computing the GCD (greatest common
+/* Euclidean algorithm: Algorithm for computing the GCD (greatest common
  * divisor) of two numbers (largest number that divides the two numbers without
  * leaving a remainder).
  *
@@ -14,11 +14,19 @@
 
 using namespace std;
 
-int euclidean_algorithm(int a, int b) {
+int gcd(int a, int b) {
     if (a == 0) {
         return b;
     }
-    euclidean_algorithm(b % a, a);
+    gcd(b % a, a);
+}
+
+int gcd_array(int a[], int n) {
+    int result = a[0];
+    for (int i = 1; i < n; ++i) {
+        result = gcd(result, a[i]);
+    }
+    return result;
 }
 
 int main() {
@@ -26,6 +34,9 @@ int main() {
     cin.tie(0);
     int a = 24;
     int b = 16;
-    cout << euclidean_algorithm(a, b);
+    cout << gcd(a, b) << "\n";
+    int n = 5;
+    int arr[n] = {2, 4, 6, 8, 16};
+    cout << gcd_array(arr, n) << "\n";
     return 0;
 }
