@@ -57,10 +57,16 @@ int main() {
                      {1, 1, 0, 0, 0, 0, 0, 0, 0, 1},
                      {1, 1, 0, 0, 0, 0, 1, 0, 1, 1}};
     int x = 4, y = 5;
-    int fill = 7;
-    print(a);
+    int fill = 9;
+    print(a);    
+    cout << "\nx = " << x << ", y = " << y << ", fill = " << fill << "\n";
     flood_fill(a, fill, x, y);
-    cout << "\n";
+    print(a);
+    x = 4; 
+    y = 0;
+    fill = 3;
+    cout << "\nx = " << x << ", y = " << y << ", fill = " << fill << "\n";
+    flood_fill(a, fill, x, y);
     print(a);
     return 0;
 }
