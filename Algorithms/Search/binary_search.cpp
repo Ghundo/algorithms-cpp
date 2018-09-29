@@ -5,10 +5,6 @@
  *
  * Time complexity: O(log n)
  * Space complexity: O(1)
- *
- * A = input array.
- * N = number of items.
- * X = value to search.
  */
 
 /**
