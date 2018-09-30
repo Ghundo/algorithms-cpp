@@ -3,10 +3,6 @@
  *
  * Time complexity: O(log n)
  * Space complexity: O(1)
- *
- * A = input array.
- * N = number of items.
- * X = value to search.
  */
 
 /**
@@ -14,13 +10,15 @@
  * created: 2018-06-28-15.57
  */
 
-#include <iostream>
+#include <bits/stdc++.h>
+
+using namespace std;
 
 int binary_search_last(const int A[], const int N, const int X) {
     int l = 0, m, r = N - 1;
-    int last = - 1;
+    int last = -1;
     while (l <= r) {
-        m = (l + r) / 2;
+        m = l + (r-l)/2;
         if(A[m] == X) {
             last = m;
             l = m + 1;
@@ -34,10 +32,12 @@ int binary_search_last(const int A[], const int N, const int X) {
 }
 
 int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(0);
     // Input should be in ascending order.
     int input[] = {1, 2, 2, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5};
     int N = sizeof(input) / sizeof(input[0]);
     int i = binary_search_last(input, N, 3);
-    std::cout << i << std::endl;
+    cout << i << endl;
     return 0;
 }
